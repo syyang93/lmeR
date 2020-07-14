@@ -52,6 +52,6 @@ run.all.lmers <- function(tx_expr, cov, rcov, gene.ids, SCORE, omit.outlier = T,
       # 'conf.high',
       'corr.rho')
   colnames(lmer.res) <- gene.ids
-  lm.res <- as.data.frame(t(lmer.res))
+  lmer.res <- as.data.frame(t(lmer.res))
   return(lmer.res)
 }
