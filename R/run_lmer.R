@@ -23,6 +23,7 @@
 # SCORE <- w.mt[,which(colnames(w.mt) == "dpcrAdjMetric")]
 
 run_lmer <- function(expr, cov, rcov, SCORE, omit.outlier = T, outlier_sd = 3) {
+    
   expr <- as.numeric(expr)
   
   # expr <- scale(expr) # uncomment if you would like to scale expression

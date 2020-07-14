@@ -26,6 +26,7 @@
 run.all.lmers <- function(tx_expr, cov, rcov, gene.ids, SCORE, omit.outlier = T, num.cores = 10)
 {
   require(pbapply)
+  require(lme4)
   start = Sys.time()
   lmer.res <-
     pblapply(tx_expr,            # Expression vector list for `pbapply::pblapply`
