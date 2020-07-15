@@ -26,6 +26,7 @@
 run.all.lmers <- function(tx_expr, cov, rcov, gene.ids, SCORE, omit.outlier = T, num.cores = 10)
 {
   require(pbapply)
+  pboptions(type="txt")
   require(lme4)
   start = Sys.time()
   lmer.res <-
