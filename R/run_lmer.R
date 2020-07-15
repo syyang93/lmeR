@@ -36,7 +36,7 @@ run_lmer <- function(expr, cov, rcov, SCORE, omit.outlier = T, outlier_sd = 3) {
   lmer.form = paste0('expr~SCORE+',paste0(colnames(cov), collapse = '+'), '+', paste0('(1|',colnames(rcov), ')', collapse = '+'))
   
   # Run mixed model
-  lmer.fit <- lmer(lmer.form, data = expr_cov)
+  lmer.fit <- lmer(lmer.form, data = expr_cov, na.action = na.exclude)
   
   # Get summary
   lmer.fit.summary <- summary(lmer.fit)
